@@ -34,8 +34,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     ui->tabWidget->clear();//将初始页面先删除
-    ui->tabWidget->insertTab(0,d,tr("drop path"));
-    ui->tabWidget->insertTab(1,tableView,tr("SQL Table"));
+    ui->tabWidget->insertTab(0,d,tr("drop path"));//将拖拽控件绑定到0号界面
+    ui->tabWidget->insertTab(1,tableView,tr("SQL Table"));//将tableview控件绑定到1号界面
 
     //信号绑定
     connect(d,&dragWidget::getURLS,this,&MainWindow::on_IsHasThisAutor);
